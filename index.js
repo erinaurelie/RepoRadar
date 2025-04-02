@@ -41,7 +41,7 @@ async function renderUser(username) {
 document.querySelector('button').addEventListener('click', (event) => {
     event.preventDefault(); // cause im using a form
 
-    const username = document.querySelector('input').value;
+    const username = document.querySelector('input').value.toLowerCase().replace(/\s+/g, "");
 
     renderUser(username);
 });
